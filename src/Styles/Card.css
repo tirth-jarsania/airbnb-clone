@@ -14,7 +14,9 @@
   }
   
   .card > img {
-      height: 70%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      height: 80%;
       width: 100%;
   }
   

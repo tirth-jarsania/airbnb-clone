@@ -2,13 +2,19 @@ import React from 'react'
 import '../Styles/Home.css'
 import Banner from './Banner'
 import Card from './Card'
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Home() {
     return (
         <div className='home'>
             <Banner />
 
-            <div className='home__section'>
+         <div className='home__section'>   
+            <Carousel 
+                centerMode
+                centerSlidePercentage='50'
+                autoPlay>
                 <Card 
                     src='https://a0.muscache.com/im/pictures/ad109d56-2421-40cd-98e6-e114160dc85b.jpg?im_w=1200'
                     title='Experience'
@@ -22,7 +28,6 @@ function Home() {
                     title='Adventures'
                     description='Multi-day trips with meals and stays' />
            
-            
                 <Card
                     src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
                     title="Online Experiences"
@@ -38,8 +43,10 @@ function Home() {
                     title="Entire homes"
                     description="Comfortable private places, with room for friends or family."
                 />
+                </Carousel>
+                </div>
             </div>
-        </div>
+        
     )
 }
 
